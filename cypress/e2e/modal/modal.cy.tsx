@@ -1,3 +1,5 @@
+///<reference types="cypress"/>
+
 describe('Проверка работы модального окна', function() {
     beforeEach(function() {
         cy.intercept('GET', 'api/ingredients', {fixture: 'ingredients.json'});
@@ -13,6 +15,7 @@ describe('Проверка работы модального окна', function
 
     it('Тест закрытия модального окна по кнопке', function () {
         cy.get('[data-cy=bun-ingredients]').contains('Ингредиент_1').click({force : true});
+        cy.get('[data-cy=modal]').should('exist');
         cy.get('[data-cy=button-close]').click({force : true});
         cy.get('[data-cy=modal]').should('not.exist');
     });

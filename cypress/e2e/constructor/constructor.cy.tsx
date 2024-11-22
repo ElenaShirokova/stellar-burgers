@@ -1,3 +1,5 @@
+///<reference types="cypress"/>
+
 describe('Проверка работы страницы конструктора', function() {
     beforeEach(function() {
         cy.intercept('GET', 'api/ingredients', {fixture: 'ingredients.json'});

@@ -9,9 +9,9 @@
     },
     "include": [
       "../node_modules/cypress",
-      "./**/*.ts",
-      "e2e/constructor/constructor.cy.tsx",
-      "e2e/modal/modal.cy.tsx",
-      "e2e/order/order.cy.tsx",
+      "./**/*.ts"
+      // "e2e/constructor/constructor.cy.tsx",
+      // "e2e/modal/modal.cy.tsx",
+      // "e2e/order/order.cy.tsx",
     ]
 }
