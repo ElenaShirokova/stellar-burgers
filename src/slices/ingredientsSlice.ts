@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { TIngredient } from '@utils-types';
 import { getIngredientsApi } from '../utils/burger-api';
 
-interface TIngredientsState {
+export interface TIngredientsState {
   isLoading: boolean;
   ingredients: TIngredient[];
   error: string | null | undefined;
