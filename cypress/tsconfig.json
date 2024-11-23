@@ -5,13 +5,13 @@
       "noEmit": true,
       // явно указываем что будем использовать типы из cypress
       // чтобы избежать пересечения с типами jest, если мы его используем
-      "types": ["cypress"]
+      "types": ["cypress", "node", "cypress-real-events"]
     },
     "include": [
       "../node_modules/cypress",
-      "./**/*.ts"
-      // "e2e/constructor/constructor.cy.tsx",
-      // "e2e/modal/modal.cy.tsx",
-      // "e2e/order/order.cy.tsx",
+      "./**/*.ts",
+      "e2e/constructor/constructor.cy.tsx",
+      "e2e/modal/modal.cy.tsx",
+      "e2e/order/order.cy.tsx",
     ]
 }

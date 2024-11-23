@@ -1,5 +1,3 @@
-///<reference types="cypress"/>
-
 describe('Проверка оформления заказа', function () {
     beforeEach(function() {
         cy.intercept('GET', 'api/ingredients', {fixture: 'ingredients.json'});
@@ -29,7 +27,7 @@ describe('Проверка оформления заказа', function () {
 
         cy.get('[data-cy=order-number]').contains('2128506').should('exist');
 
-        cy.get('[data-cy=button-close]').click({force : true});
+        cy.get('[data-cy=button-close]').click();
         cy.get('[data-cy=modal]').should('not.exist');
 
         cy.get('[data-cy=burger-constructor]').should('not.contain', 'Ингридиент_1');
